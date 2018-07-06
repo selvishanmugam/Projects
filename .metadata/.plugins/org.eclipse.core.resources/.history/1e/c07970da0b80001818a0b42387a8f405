@@ -1,0 +1,45 @@
+package com.bridgeit.banking;
+
+public class Node {
+	
+		int data;
+		Node next;
+	 
+	    
+	    public Node()
+	    {
+	        next = null;
+	        data = 0;
+	    }  
+	    
+	    
+	    public Node(int d,Node n)
+	    {
+	        data = d;
+	        next = n;
+	    }  
+	    
+	   	public void setData(int d)
+	    {
+	        data = d;
+	    }  
+	   
+	   	
+	    public void setLink(Node n)
+	    {
+	        next = n;
+	    }  
+
+/*   	public Node getLink()
+	    {
+	     	return link;
+	    }  
+	    
+		
+	    
+	    public int getData()
+	    {
+	        return data;
+	    }*/
+	
+}

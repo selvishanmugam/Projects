@@ -1,0 +1,16 @@
+package com.bridgeit.algorithm;
+
+import com.bridgeit.utility.Utility;
+
+public class AnagramNum {
+
+	public static void main(String[] args) {
+		
+		Utility ut= new Utility();
+		System.out.println("Enter no of value");
+		int n=ut.getVal();
+		int[] a=ut.arrayVal(n);
+		//ut.isAnagram(a,n);
+	}
+
+}

@@ -1,0 +1,30 @@
+package unorderedlist;
+
+import com.bridgeit.utility.Utility;
+
+public class Unordered {
+	
+	static Node first;
+	
+	static UtilityUnorderedLIst uu=new UtilityUnorderedLIst();
+	
+	public static void main(String[] args) {
+		Utility ut=new Utility();
+		String word="";
+		
+		//Unordered ud=new Unordered();
+		first=uu.readFile(first);
+		System.out.println("Enter the word you want to search");
+		String search=ut.getstring();
+		first=uu.searchData(search,first);
+		String index=" ";
+		while(first!=null) {
+			index=index+first.data;
+			index=index+" ";
+			first=first.next;
+		}
+		uu.writeFile(word);
+		
+	}
+
+}

@@ -1,0 +1,32 @@
+package com.bridgeit.datastructure;
+
+public class StackPrimeAna {
+	QNode top,head;
+
+	public StackPrimeAna() {
+		
+		this.top=null;
+		
+	}
+
+	public void push(int data) {
+		QNode temp=new QNode(data);
+		
+		if(top==null) {
+			
+			top=temp;
+			top.next=null;
+		}
+		else {
+			
+			top.next=temp;
+			top=top.next;
+			
+		}		
+	}
+	public QNode pop() {
+		
+	}
+	
+
+}

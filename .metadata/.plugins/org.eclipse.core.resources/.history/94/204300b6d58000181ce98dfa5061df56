@@ -1,0 +1,27 @@
+package com.bridgeit.orderedlist;
+
+import com.bridgeit.orderedlist.Node;
+import com.bridgeit.utility.Utility;
+
+public class orderedList {
+	static Node first;
+
+	public static void main(String[] args) {
+		
+		UtilityOrderedList uo= new UtilityOrderedList();
+		Utility ut=new Utility();
+		int word=0;
+		 
+		first=uo.list(first);
+		System.out.println("Enter the number you want to search");
+		int search=ut.getVal();
+		first=uo.search(search,first);
+		String index=" ";
+		while(first!=null) {
+			index=index+first.data;
+			index=index+" ";
+			first=first.next;
+		}
+		uo.writeFile(word);
+	}	
+}

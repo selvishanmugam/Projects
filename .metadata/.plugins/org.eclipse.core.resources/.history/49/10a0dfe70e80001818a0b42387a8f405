@@ -1,0 +1,21 @@
+package com.bridgeit.banking;
+
+import com.bridgeit.utility.Utility;
+
+public class Banking {
+	static int balance=1500;
+	public static void main(String[] args) {
+		Utility ut=new Utility();
+		Queue q=new Queue();
+		System.out.println("Enter the number of person");
+		int person=ut.getVal();
+		
+		System.out.println("Enter the size of the queue");
+		int size=ut.getVal();
+		
+		q.
+		
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.bridgeit.algorithm;
+
+import com.bridgeit.utility.Utility;
+
+public class GCG {
+
+	static Utility ut=new Utility();
+	
+	public static void main(String arg[]) {
+		int x = 106;
+		System.out.print(ut.swapNibbles(x));
+	}
+}

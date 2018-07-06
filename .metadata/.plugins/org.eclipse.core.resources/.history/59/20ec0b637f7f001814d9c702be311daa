@@ -1,0 +1,11 @@
+package palindrome;
+
+public class UtilityPalindrome {
+
+	public int palindromeCheck(String str) {
+		
+		return 0;
+	}
+
+	
+}

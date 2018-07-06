@@ -1,0 +1,17 @@
+package com.bridgeit.algorithm;
+
+import com.bridgeit.utility.Utility;
+
+public class Sort {
+
+	public static void main(String[] args) {
+		Utility ut=new Utility();
+		System.out.println("Enter");
+		int number=ut.getVal();
+		while (number > 0) {
+		   System.out.println(number % 10);
+		    number = number / 10;
+		}
+	}
+
+}

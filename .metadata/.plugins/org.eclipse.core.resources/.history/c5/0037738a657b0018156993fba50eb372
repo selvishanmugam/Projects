@@ -1,0 +1,29 @@
+package com.bridgeit.algorithm;
+
+import com.bridgeit.utility.Utility;
+
+public class Number {
+
+	public static void main(String[] args) {
+		
+		Utility ut=new Utility();
+		System.out.println("enter a number");
+		int n=ut.getVal();
+		String num=Integer.toString(n);
+		char[] ch=new char[num.length()];
+		ch=num.toCharArray();
+		
+		
+		/*
+		
+		int x=a[i];
+		int[] p=x.toArray;
+		int[] q=intToArray(a[i]);
+		if(a[i].length!=a[j].length) {
+			
+		}*/
+		
+
+	}
+
+}

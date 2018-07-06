@@ -1,0 +1,25 @@
+package com.bridgeit.algorithm;
+
+import com.bridgeit.utility.Utility;
+
+public class MethodUtility {
+
+	public static void main(String[] args) {
+		
+		Utility ut=new Utility();
+		System.out.println("1. Choose any option from the below list ");
+		System.out.println("2. BinarySearch for integer");
+		System.out.println("3. BinarySearch  for String");
+		System.out.println("4. InsertionSort for integer");
+		System.out.println("5. InsertionSort for String");
+		System.out.println("6. BubbleSort for integer");
+		System.out.println("7. BubbleSort for String");
+		System.out.println("Enter your choice");
+		int ch=ut.getVal();
+
+
+
+
+	}
+
+}

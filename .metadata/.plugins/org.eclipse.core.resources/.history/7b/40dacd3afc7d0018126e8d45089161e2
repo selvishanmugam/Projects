@@ -1,0 +1,10 @@
+package com.bridgeit.unorderedcollectn;
+
+public class UnorderedCollection {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -3,16 +3,16 @@ package com.bridgeit.orderedlist;
 public class Node {
 	
 	int data;
-	Node next;
+	Node nextNode;
 	
 	public Node() {
 		
-		this.next=null;
+		this.nextNode=null;
 	}
 	public Node (int data) {
 		
 		this.data=data;
-		next=null;
+		nextNode=null;
 	}
 
 	

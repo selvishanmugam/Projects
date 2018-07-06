@@ -1,0 +1,20 @@
+package unorderedlist;
+
+public class UtilityUnorderedLIst {
+
+	public Node readFile(Node first) {
+		
+		
+		
+		return null;
+	}
+
+	public void writeFile(String word) {
+		file f=new file("/home/bridgeit/document/textdata")
+		
+	}
+		
+	
+	
+	
+}

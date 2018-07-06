@@ -1,0 +1,11 @@
+package com.bridgeit.algorithm;
+
+public class GCG {
+
+	
+	
+	public static void main(String arg[]) {
+		int x = 106;
+		System.out.print(ut.swapNibbles(x));
+	}
+}

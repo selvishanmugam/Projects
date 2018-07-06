@@ -1,0 +1,21 @@
+package com.bridgeit.datastructure;
+
+public class QuePrimeAna {
+	QNode front,rear;
+
+	public void enQue(int i) {
+		
+		
+	}
+	
+	
+	public QNode deQue() {
+		
+		
+		return null;
+		
+		
+	}
+
+
+}

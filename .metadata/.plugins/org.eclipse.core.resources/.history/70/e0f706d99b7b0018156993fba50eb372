@@ -1,0 +1,14 @@
+package com.bridgeit.algorithm;
+
+public class GCG {
+
+	static int swapNibbles(int x) {
+		return ((x & 0x0F) << 4 | (x & 0xF0) >> 4);
+	}
+
+	
+	public static void main(String arg[]) {
+		int x = 106;
+		System.out.print(swapNibbles(x));
+	}
+}

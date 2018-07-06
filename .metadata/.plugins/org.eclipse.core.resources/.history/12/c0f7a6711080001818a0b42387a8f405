@@ -1,0 +1,18 @@
+package com.bridgeit.banking;
+
+public class Queue {
+	
+	int front,rear,size,person;
+	int[] arr;
+	public Queue(int size, int person) {
+		this.size=size;
+		this.person=person;
+		front=0;
+		arr=new int[size];
+		System.out.println("Queue is ready");
+	}
+	public void enQue() {
+		
+	}
+
+}

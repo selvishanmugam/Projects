@@ -1,0 +1,40 @@
+package com.bridgeit.orderedlist;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import com.bridgeit.unorderedlist.Node;
+
+public class UtilityOrderedList {
+
+	public Node list(Node first) {
+		try {
+			FileInputStream fs = new FileInputStream("/home/bridgeit/selvi/java_programs/documents.txt");
+			char ch;
+			String word = "";
+			while (fs.available() > 0) {
+				ch = (char) fs.read();
+				word = word + ch;
+			}
+			String[] wordArr = word.split(" ");
+			int[] arr=new int[wordArr.length-1];
+			for (int i = 0; i < wordArr.length-1; i++) {
+				arr[i]=Integer.parseInt(wordArr[i]);
+			}
+			arr=sort(arr);
+			for (int i = 0; i < wordArr.length-1; i++) {
+			
+					first = add(first, arr[i]);
+				}
+			
+		} catch (FileNotFoundException e) {
+
+			e.printStackTrace();
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		}
+		return first;
+	}
+}

@@ -12,7 +12,7 @@ public class BalancedParantheses {
 	 System.out.println("Enter the expression");
 	 String exp=ut.getstring();
 	 System.out.println("The balanced parentheses to check for the expression");
-	ut.balancedParentheses(exp,size);
+	 ut.balancedParentheses(exp,size);
 	}
 
 }

@@ -1,0 +1,12 @@
+package unorderedcollectn;
+
+import com.bridgeit.utility.Utility;
+
+public class UnoderedCollection {
+
+	public static void main(String[] args) {
+		Utility ut=new Utility();
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package unorderedlist;
+
+public class Node {
+	int d;
+	String data;
+	Node next;
+
+	public Node() {
+		this.next = null;
+	}
+
+	public void setData(int d) {
+		this.d = d;
+		next=null;
+	}
+
+	public void setData(String data) {
+		this.data = data;
+		next=null;
+	}
+	
+	
+	
+}

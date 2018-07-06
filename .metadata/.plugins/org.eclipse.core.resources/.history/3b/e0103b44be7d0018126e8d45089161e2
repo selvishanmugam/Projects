@@ -1,0 +1,19 @@
+package unorderedlist;
+
+import com.bridgeit.utility.Utility;
+
+public class Unordered {
+	
+	static Node first;
+	Utility ut=new Utility();
+	static UtilityUnorderedLIst uu=new UtilityUnorderedLIst();
+	
+	public static void main(String[] args) {
+		
+		//Unordered ud=new Unordered();
+		first=uu.readFile(first);
+		uu.writeFile();
+		
+	}
+
+}

@@ -1,0 +1,59 @@
+package com.bridgeit.algorithm;
+
+import com.bridgeit.utility.Utility;
+
+public class MethodUtility {
+
+	public static void main(String[] args) {
+		
+		Utility ut=new Utility();
+		System.out.println("Choose any option from the below list ");
+		System.out.println("1. BinarySearch for integer");
+		System.out.println("2. BinarySearch  for String");
+		System.out.println("3. InsertionSort for integer");
+		System.out.println("4. InsertionSort for String");
+		System.out.println("5. BubbleSort for integer");
+		System.out.println("6. BubbleSort for String");
+		System.out.println("Enter your choice");
+		int ch=ut.getVal();
+		switch(ch) {
+		case 4:	System.out.println("How many numbers u want to enter??");
+				int n4=ut.getVal();
+				String list[]={"artichoke" , "Apple" , "CHERRY" , "banana"};
+				ut.insertionSortChar(list);
+				break;
+		
+		case 3:	System.out.println("How many numbers u want to enter??");
+				int n3=ut.getVal();
+				int[] b3=ut.arrayVal(n3);
+				ut.insertionSort(b3,n3);
+				break;
+	
+		case 5: System.out.println("Enter the number of integer you want insert");
+				int n5=ut.getVal();
+				System.out.println("Enter "+n5+" values for sorting");
+				int[] arr=ut.arrayVal(n5);
+				int[] arr1=ut.bubbleSort(arr,n5);
+				for(int i=0;i<n5;i++) {
+					System.out.println(arr1[i]);
+				}
+				break;
+				
+		default:System.out.println("Invalid Entry");
+				break;
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+
+
+
+
+	}
+
+}

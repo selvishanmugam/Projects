@@ -1,0 +1,24 @@
+package palindrome;
+
+public class DequeueUtility <E> {
+	
+	public DequeueUtility() {
+			
+	}
+	
+	Dequeue<E> front;
+	Dequeue<E> rear;
+	int size;
+	
+	public void addFront(E c) {
+		if(front==null) {
+			front.data=c;
+			rear=front;
+		}
+		else {
+			Dequeue<E> temp = 
+		}
+		
+	}
+	
+}

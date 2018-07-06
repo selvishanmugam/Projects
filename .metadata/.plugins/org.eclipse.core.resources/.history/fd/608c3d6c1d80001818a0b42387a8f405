@@ -1,0 +1,16 @@
+package com.bridgeit.datastructure;
+
+public class QuePrimeAna {
+
+	public void enQue(int i) {
+		
+		
+	}
+
+	public int deQue() {
+	
+		return 0;
+	}
+
+
+}

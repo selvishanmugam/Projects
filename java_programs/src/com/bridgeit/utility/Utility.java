@@ -5,22 +5,34 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.bridgeit.banking.Queue;
-import com.bridgeit.datastructure.QNode;
 import com.bridgeit.datastructure.QuePrimeAna;
 import com.bridgeit.datastructure.Stack;
 import com.bridgeit.datastructure.StackPrimeAna;
+import com.bridgeit.oop.Stock;
+import com.bridgeit.oop.UserDetails;
 
 public class Utility {
 	Scanner sc = new Scanner(System.in);
 	Random rand = new Random();
+	
+	private final String RegexString_Name="<<name>>";
+	private final String RegexString_fName="<<full name>>";
+	private final String RegexString_date="01/01/2016";
+	private final String RegexString_phoneno="91-xxxxxxxxxx";
 
 	public String getstring() {
 		return sc.next();
@@ -147,12 +159,11 @@ public class Utility {
 
 	public void gamblerGame(int stk, int goal, int no) {
 
-		int bet = 0, win = 0;
+		int win = 0;
 		for (int i = 1; i <= no; i++) {
 
 			int money = stk;
 			while (money > 0 && money < goal) {
-				bet++;
 				if (Math.random() < 0.5)
 					money++;
 				else
@@ -951,4 +962,93 @@ public class Utility {
 
 	}
 
+	public String getDateVal(Date date) {
+		Date date1 = new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+		String strDate = formatter.format(date);
+		System.out.println(strDate);
+		return strDate;
+	}
+
+	public String textFile(String string) {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try{
+				br=new BufferedReader(new FileReader(string));
+			StringBuilder sb=new StringBuilder();
+			String line=br.readLine();
+			while(line!=null){
+				sb.append(line);
+				sb.append(System.lineSeparator());
+				line=br.readLine();
+			}
+			return sb.toString();
+		 }
+		catch(Exception e){
+			return null;
+		}
+		finally{
+			try{
+				br.close();
+			}
+			catch(IOException ioe){
+			}	
+		}
+	}
+
+	public String stringChange(UserDetails ud, String str) {
+		
+		Pattern p=Pattern.compile(RegexString_Name);
+		Matcher m=p.matcher(str);
+		str=m.replaceAll(ud.getName());
+		
+		p=Pattern.compile(RegexString_fName);
+		m=p.matcher(str);
+		str=m.replaceAll(ud.getName()+" "+ud.getlName());
+		
+		p=Pattern.compile(RegexString_phoneno);
+		m=p.matcher(str);
+		String st=Long.toString(ud.getPhoneNo());
+		str=m.replaceAll(st);
+		
+		p=Pattern.compile(RegexString_date);
+		m=p.matcher(str);
+		str=m.replaceAll(ud.getDate());
+		
+		return str;
+	}
+
+	
+	/*public ArrayList<Stock> getStockDetails(String fileName){
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		ArrayList<Stock> stockList=new ArrayList<Stock>();
+		try{
+			br=new BufferedReader(new FileReader(fileName));
+			StringBuilder sb=new StringBuilder();
+			String line=br.readLine();
+			SortingFunction sortingFunction=new SortingFunction();
+			while(line!=null){
+				String words[]=sortingFunction.wordsArrayFromStatement(line);
+				try{
+					stockList.add(new Stock(words[0],Integer.parseInt(words[1]),Integer.parseInt(words[2])));
+				}
+				catch(NumberFormatException nfe){
+				}
+				catch(ArrayIndexOutOfBoundsException ae){
+				}
+				line=br.readLine();
+			}
+			return stockList;
+		 }
+		catch(Exception e){
+			return null;
+		}
+		finally{
+			try{
+				br.close();
+			}
+			catch(IOException ioe){
+			}	
+		}
+	}
+*/
 }

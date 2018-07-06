@@ -1,0 +1,43 @@
+package com.bridgeit.banking;
+
+
+
+public class UtilityBanking {
+
+	public UtilityBanking(){
+		
+	}
+	Node front=null;
+	Node rear=null;
+	int size=0;
+	
+	public void enque(int a) {
+		Node node=new Node(a,null);
+		if(front==null)
+		{
+			front=node;
+			rear=front;
+		}
+	
+	else {
+		rear.next=node;
+		//node.pre=rear;
+		rear=node;
+	}
+	size++;
+	}
+	
+	public int deque() {
+		int num=0;
+		if(front==null) {
+			System.out.println("No Elements to delete");
+		}
+		else {
+			num=front.data;
+			front=front.next;	
+		}
+		size--;
+		return num;
+	}
+	
+}

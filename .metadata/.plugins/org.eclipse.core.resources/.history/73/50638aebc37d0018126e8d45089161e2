@@ -1,0 +1,40 @@
+package unorderedlist;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class UtilityUnorderedLIst {
+
+	public Node readFile(Node first) throws FileNotFoundException {
+		FileInputStream fs=new FileInputStream("/Home/selvi/java_programs/document/textdata.txt");
+		char ch ;
+		String word="";
+		while(fs.available()>0) {
+			ch=(char) fs.read();
+			word=word+ch;
+		}
+		String[] wordArr=word.split(" ");
+		for(int i=0;i<wordArr.length;i++) {
+			first=addToFile(first,wordArr[i]);
+		}
+		
+		
+		
+		return null;
+	}
+
+	public void writeFile(String word){
+		try {
+			File f=new File("/Home/selvi/java_programs/document/textdata.txt");
+			f.createNewFile();
+			FileWriter fw=new FileWriter(word);
+			fw.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+ 
+}

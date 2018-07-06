@@ -1,0 +1,88 @@
+package palindrome;
+
+public class DequeueUtility <E> {
+	
+	public DequeueUtility() {
+			
+	}
+	
+	Dequeue<E> front;
+	Dequeue<E> rear;
+	int size;
+	
+	public void addFront(E c) {
+		if(front==null) {
+			front.data=c;
+			rear=front;
+		}
+		else {
+			Dequeue<E> temp = null;
+			temp.data=c;
+			temp.next=front;
+			front.pre=temp;
+			front=temp;
+		}
+		size++;
+	}
+	
+	public void addRear(E c) {
+		/*if(front==null) {
+			Dequeue<E> temp1=null;
+			temp1.data=c;
+			front.data= (E) temp1;
+			rear=front;
+			}*/
+			if(front==null) //if no element in list
+			{
+				Dequeue<E>tNode=new Dequeue()<E>(c);
+				front=tNode;
+				rear=front;
+			}
+		
+		else {
+			Dequeue<E> temp=new Dequeue<>(c);
+			rear.next=temp;
+			temp.pre=rear;
+			rear=temp;
+		}
+		size++;
+	}
+	public E removeFront() {
+		E num=null;
+		if(front==null) {
+			System.out.println("No Elements to delete");
+		}
+		else {
+			num=front.data;
+			front=front.next;	
+		}
+		size--;
+		return num;
+	}
+	
+	public E removeRear() {
+		E num=null;
+		if(front==null) {
+			System.out.println("No elements to delete");
+		}
+		else {
+			num=rear.data;
+			rear=rear.pre;
+			rear.next=null;
+		}
+		size--;
+		return num;
+	}
+	public boolean isEmpty() {
+		if(front==null) {
+			return true;
+		}
+		else 
+			return false;
+	}
+	
+	public int getSize() {
+		return size;
+	}
+	
+}

@@ -1,0 +1,75 @@
+package com.bridgeit.datastructure;
+
+public class StackPrimeAna {
+	QNode top;
+	
+
+	public StackPrimeAna() {
+		
+		this.top=null;
+		
+	}
+
+	public void push(int data) {
+		/*QNode temp=new QNode(data);
+		
+		if(top==null) {
+			
+			top=temp;
+			temp.next=null;
+			
+		}
+		else {
+			
+			top.next=temp;
+			top=temp;*/
+		QNode nptr = new QNode (data);
+        if (top == null)
+            top = nptr;
+        else
+        {
+            nptr.next=top;
+            top = nptr;
+        }
+
+			
+		}		
+	}
+	
+	public int pop() {
+		/*
+		if (isEmpty()) {
+
+			return 0;
+	
+		}
+		
+		QNode temp = top ;
+		top = temp.next;
+
+		return temp.data;*/
+
+        if (isEmpty() )
+            return 0;
+        QNode ptr = top;
+        top = ptr.next;
+      
+        return ptr.data;
+
+	}
+	
+	public QNode peek() {
+		if(isEmpty()) {
+			 System.out.println("The stack is empty");
+		}
+		return top;
+		
+	}
+
+	private boolean isEmpty() {
+		
+		return top==null;
+	}
+	
+
+}

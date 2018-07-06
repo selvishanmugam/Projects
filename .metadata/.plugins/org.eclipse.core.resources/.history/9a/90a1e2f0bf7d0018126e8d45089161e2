@@ -1,0 +1,22 @@
+package unorderedlist;
+
+import java.io.File;
+
+public class UtilityUnorderedLIst {
+
+	public Node readFile(Node first) {
+		
+		
+		
+		return null;
+	}
+
+	public void writeFile(String word) {
+		File f=new File("/home/bridgeit/document/textdata.txt");
+		
+	}
+		
+	
+	
+	
+}
